@@ -1,1 +1,16 @@
+<h1>Test, {{title}}</h1>
+<!-- <div>{{'holamundo' | mayuscula}}</div> -->
+<!-- <div>{{['Andres', 'Felipe'] | buscaarray : 1 | mayuscula}}</div> -->
+
+<input type = "text" placeholder="filtro" [(ngModel)]="filtro">
+<select [(ngModel)]="campo">
+    <option value="nombre">Nombre</option>
+    <option value="correo">Correo</option>
+</select>
+
+<div *ngFor="let item of datos | filtro : campo : filtro ">
+    <div>{{item.nombre}} - {{item.correo}}</div>
+</div>
+
+
 <router-outlet />

@@ -14,6 +14,7 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
+ //Este test verifica que el titulo de spect sea el mimo que esta en app.component
   it(`should have the 'Jest_Supertest_frontend' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
@@ -24,6 +25,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, Jest_Supertest_frontend');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Test, Jest_Supertest_frontend');
   });
 });
